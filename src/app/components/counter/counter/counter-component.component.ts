@@ -9,7 +9,20 @@ export class CounterComponent implements OnInit {
 
   constructor() { }
 
+  counter: number = 0;
   ngOnInit(): void {
+  }
+
+  onIncrement(){
+    this.counter++;
+  }
+
+  onDecrement(){
+    this.counter--;
+  }
+
+  onReset(){
+    this.counter = 0;
   }
 
 }
