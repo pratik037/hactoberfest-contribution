@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['counter-app'])
   }
 
+  switchToCounterNGRX(){
+    this.router.navigate(['counter-app-ngrx'])
+  }
+
 }
