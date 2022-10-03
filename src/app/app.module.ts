@@ -16,6 +16,8 @@ import { CounterOutputNgrxComponent } from './components/counter-ngrx/counter-ou
 import { CounterButtonNgrxComponent } from './components/counter-ngrx/counter-button-ngrx/counter-button-ngrx.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './components/counter-ngrx/state/counter-ngrx.reducer';
+import { TestCompComponent } from './components/test-comp/test-comp.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { counterReducer } from './components/counter-ngrx/state/counter-ngrx.red
     CounterButtonsComponent,
     CounterNgrxComponent,
     CounterOutputNgrxComponent,
-    CounterButtonNgrxComponent
+    CounterButtonNgrxComponent,
+    TestCompComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +38,7 @@ import { counterReducer } from './components/counter-ngrx/state/counter-ngrx.red
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    HttpClientModule,
     StoreModule.forRoot({
       counter: counterReducer
     })

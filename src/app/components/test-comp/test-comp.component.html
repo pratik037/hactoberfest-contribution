@@ -1,0 +1,11 @@
+
+<div *ngIf="res$ | async as response">
+    <!-- {{response|json}} -->
+  <div *ngFor="let data of response['data']">
+    <!-- {{data|json}} -->
+    Population of {{data['Nation']}} in the Year {{data['Year']}} {{ data["Population"] }}
+  </div>
+  <div *ngFor="let source of response['source']">
+    Source {{source['annotations']['source_name']}}
+  </div>
+</div>
