@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CounterNgrxComponent } from './components/counter-ngrx/counter-ngrx/counter-ngrx.component';
 import { CounterComponent } from './components/counter/counter/counter-component.component';
 import { HomeComponent } from './components/home-component/home-component.component';
+import { TestCompComponent } from './components/test-comp/test-comp.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'counter-app-ngrx',
     component: CounterNgrxComponent
+  },
+  {
+    path:'test-component',
+    component:TestCompComponent
   }
 ];
 

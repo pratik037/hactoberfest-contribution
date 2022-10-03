@@ -21,4 +21,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['counter-app-ngrx'])
   }
 
+  switchToTestComp(){
+    this.router.navigate(['test-component'])
+  }
+
 }
