@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { CounterButtonNgrxComponent } from './components/counter-ngrx/counter-button-ngrx/counter-button-ngrx.component';
-import { StoreModule } from '@ngrx/store';
-import { CustomerCounterInputComponent } from './components/counter-ngrx/customer-counter-input/customer-counter-input.component';
-import { MatInputModule } from '@angular/material/input';
-import { HomeComponent } from './components/home-component/home-component.component';
-import { CounterComponent } from './components/counter/counter/counter-component.component';
+// import { counterReducer } from './components/counter-ngrx/state/counter-ngrx.reducer';
 import { CounterButtonsComponent } from './components/counter/counter-buttons/counter-buttons.component';
 import { CounterOutputComponent } from './components/counter/counter-output/counter-output.component';
-import { CounterNgrxComponent } from './components/counter-ngrx/counter-ngrx/counter-ngrx.component';
-import { CounterOutputNgrxComponent } from './components/counter-ngrx/counter-output-ngrx/counter-output-ngrx.component';
-import { counterReducer } from './components/counter-ngrx/state/counter-ngrx.reducer';
+import { CounterComponent } from './components/counter/counter/counter-component.component';
+import { HomeComponent } from './components/home-component/home-component.component';
+import { DashoardTableComponent } from './components/new-contribution/dashoard-table/dashoard-table.component';
 import { TestCompComponent } from './components/test-comp/test-comp.component';
-import { HttpClientModule } from '@angular/common/http';
-import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -30,11 +30,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     CounterComponent,
     CounterOutputComponent,
     CounterButtonsComponent,
-    CounterNgrxComponent,
-    CounterOutputNgrxComponent,
-    CounterButtonNgrxComponent,
     TestCompComponent,
-    CustomerCounterInputComponent
+    DashoardTableComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +43,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     HttpClientModule,
     MatInputModule,
     MatFormFieldModule,
-    StoreModule.forRoot({
-      counter: counterReducer
-    })
+    // StoreModule.forRoot({
+    //   counter: counterReducer
+    // }),
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
