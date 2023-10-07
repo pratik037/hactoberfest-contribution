@@ -21,6 +21,8 @@ import { CounterComponent } from './components/counter/counter/counter-component
 import { HomeComponent } from './components/home-component/home-component.component';
 import { DashoardTableComponent } from './components/new-contribution/dashoard-table/dashoard-table.component';
 import { TestCompComponent } from './components/test-comp/test-comp.component';
+import { DynamicReactiveFormTableComponent } from './components/dynamic-form-table/dynamic-reactive-form-table/dynamic-reactive-form-table.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,7 +33,8 @@ import { TestCompComponent } from './components/test-comp/test-comp.component';
     CounterOutputComponent,
     CounterButtonsComponent,
     TestCompComponent,
-    DashoardTableComponent
+    DashoardTableComponent,
+    DynamicReactiveFormTableComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,9 @@ import { TestCompComponent } from './components/test-comp/test-comp.component';
     // }),
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
